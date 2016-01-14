@@ -1,17 +1,24 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+  Session.setDefault('filterString', '');
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+  Template.body.helpers({
+    alerts: function() {
+      return Session.get('filteredAlerts');
     }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+  Template.body.onRendered(function(){
+    this.autorun(function(){
+      Session.set('filteredAlerts', Alerts
+        .find({title: new RegExp('^.*' + Session.get('filterString') + '.*$', 'gi')})
+        .fetch()
+      );  
+    });
+  });
+
+  Template.searchField.events({
+    'keyup input[name="alertSearch"]': function(event){
+      Session.set('filterString', $('input[name="alertSearch"]').val());
     }
   });
 }
