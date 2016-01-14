@@ -1,6 +1,9 @@
 <template name="menuBar">
 <div id="menuBar">
-  <h1>pop alerts</h1>
-  <button class="menu-button">{{> menuIcon}}</button>
+  <div class="menuBar__container">
+    <h1>pop alerts</h1>
+    <button id="menu__button">{{> menuIcon}}</button>
+    {{> menu menuItems}}
+  </div>
 </div>
 </template>
