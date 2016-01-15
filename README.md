@@ -1,2 +1,3 @@
 # meteor-test-app
-A test application in meteor
+
+To run, clone and run `meteor run`. Runs at port 3000 by default.
