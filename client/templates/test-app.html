@@ -5,15 +5,19 @@
 <body>
   {{> menuBar}}
 
-  {{> searchField}}
-
-  <div class="alertFilter__container">
-    {{> alertFilter}}
+  <div id="search__container">
+    {{> searchField}}
   </div>
 
-  <ul id="alertList">
-    {{#each alerts}}
-      {{> listItem}}
-    {{/each}}
-  </ul>
+  <div class="alertList__container">
+    <div class="alertFilter__container">
+      {{> alertFilter}}
+    </div>
+
+    <ul class="alertList">
+      {{#each alerts}}
+        {{> listItem}}
+      {{/each}}
+    </ul>
+  </div>
 </body>
