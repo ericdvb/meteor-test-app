@@ -1,0 +1,16 @@
+.alertFilter__container {
+  margin: 0 auto;
+  width: 66%;
+
+  @media #{$medium-only} {
+    width: 50%
+  }
+
+  @media #{$large-up} {
+    width: 33%;
+  }
+}
+
+body {
+  background-color: $background-gray;
+}
