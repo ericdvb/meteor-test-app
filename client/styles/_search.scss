@@ -1,0 +1,32 @@
+#search__container {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 6rem;
+  margin: 12.5rem auto 3.5rem;
+
+  input[name="alertSearch"] {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid $border-gray;
+    font-size: 3rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .searchIcon {
+    position: absolute;
+    right: 1rem;
+    margin: 1.25rem 0 0 0;
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
