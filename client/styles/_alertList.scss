@@ -1,0 +1,55 @@
+.alertList__container {
+  width: 80%;
+  padding: 3rem 0 0 0;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .5rem;
+
+  ul {
+    padding: 0;
+    margin: 3rem 0 0 0;
+    border-top: 1px solid $border-gray;
+    list-style-type: none;
+  }
+  
+  li.alert {
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid $border-gray;
+  }
+
+  p {
+    flex: 1 1 80%;
+    display: inline-block;
+    font-size: 1.8rem;
+  }
+  
+  .alert button.edit__button {
+    flex: 2 1 6rem;
+    float: right;
+    width: 6rem;
+    height: 4rem;
+    padding: .75rem 1rem;
+    border: 0;
+    border-radius: 1.75rem;
+    font: normal 1.4rem/1.4rem 'GT Walsheim';
+    font-size: 1.4rem;
+    background-color: $button-gray;
+    text-transform: uppercase;
+    transition: all .25s ease-out;
+
+    &:hover {
+      background-color: $yellow;
+    }
+
+    &:active {
+      background-color: $active-yellow;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+}
