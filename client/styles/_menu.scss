@@ -37,7 +37,7 @@
 
     &.active + #menu {
       visibility: visible;
-      margin: 5.6rem 0 0 0;
+      margin: 5.2rem 0 0 0;
       opacity: 1;
       transition: all .15s ease-in;
     }
@@ -83,6 +83,14 @@
         background-color: $yellow;
         color: black;
 
+        &:first-child {
+          border-radius: .4rem .4rem 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 .4rem .4rem;
+        }
+
         a { color: black; }
       }
 
@@ -92,6 +100,10 @@
 
       &:active {
         background-color: $active-yellow;
+      }
+      
+      &:active + .accent-triangle {
+        border-bottom: 2rem solid $active-yellow;
       }
     }
 

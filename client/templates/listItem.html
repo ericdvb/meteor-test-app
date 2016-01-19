@@ -1,6 +1,8 @@
 <template name="listItem">
-<li class="alert">
+<li class="alert" data-itemID="{{_id}}">
   <p>{{title}}</p>
+  <input name="itemName" type="text" class="inactive" value="{{title}}">
   <button class="edit__button">edit</button>
+  <div class="error__container inactive"></div>
 </li>
 </template>

@@ -14,6 +14,9 @@
   
   li.alert {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     padding: 1rem 3rem;
     border-bottom: 1px solid $border-gray;
@@ -24,9 +27,22 @@
     display: inline-block;
     font-size: 1.8rem;
   }
+
+  .alert input[name="itemName"] {
+    flex: 1 1 77%;
+    flex-basis: calc(77% + .3rem);
+    box-sizing: border-box;
+    font: normal 1.8rem/1.8rem Times;
+    margin: 1.5rem 3% 1.5rem -.3rem;
+    opacity: 1;
+    transition: opacity .1s;
+
+    &:not(.inactive) + .edit__button {
+    }
+  }
   
-  .alert button.edit__button {
-    flex: 2 1 6rem;
+  .alert .edit__button {
+    flex: 2 1 5%;
     float: right;
     width: 6rem;
     height: 4rem;
@@ -37,7 +53,7 @@
     font-size: 1.4rem;
     background-color: $button-gray;
     text-transform: uppercase;
-    transition: all .25s ease-out;
+    transition: background-color .25s ease-out;
 
     &:hover {
       background-color: $yellow;
@@ -51,5 +67,30 @@
       outline: none;
     }
   }
-  
+
+  .error__container {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    margin-top: .5rem;
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, .2);
+    border: .1rem solid red;
+    border-radius: .5rem;
+    color: red;
+    font: normal 1.8rem/1.8rem Times;
+    transition: opacity .25s ease-out, height .25s ease-out;
+  }
+
+  .inactive {
+    display: none;
+    opacity: 0;
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+
+  .collapsed-height {
+    height: 0;
+  }
 }
